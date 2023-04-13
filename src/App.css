@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+
+:root {
+    --font-roboto: "Roboto Slab", serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: rgb(30, 30, 32);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+::-webkit-scrollbar {
+    display: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+    font-family: var(--font-roboto);
+    color: goldenrod;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+    height: 30px;
+    width: 1000px;
+
+    background-color: rgb(40, 40, 45);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+    outline: none;
+    border-radius: 40px;
+    border: none;
+    font-size: 30px;
+
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shelf-cont {
+    margin-right: 330px;
+    margin-left: 330px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.book-cont {
+    background-color: rgb(40, 40, 45);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+    height: 420px;
+    width: 275px;
+
+    border-radius: 30px;
+    margin: 15px;
+}
+
+.book-cont img {
+    width: 100%;
+    height: 80%;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+p {
+    margin: 0;
+}
+
+.info-cont {
+    height: 75px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.no-books-found {
+    font-size: 30px;
 }
