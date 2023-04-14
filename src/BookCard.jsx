@@ -21,9 +21,9 @@ const BookCard = ({ book }) => {
         : "Author unknown";
 
     pages =
-        book.volumeInfo.pages === 0 || book.volumeInfo.pages === undefined
-            ? "Pages unknown"
-            : book.volumeInfo.pages + " pages";
+        (book.volumeInfo.pageCount && book.volumeInfo.pageCount != 0)
+            ? book.volumeInfo.pageCount + " pages"
+            : "Pages unknown"
 
     return (
         <div className="book-cont">
